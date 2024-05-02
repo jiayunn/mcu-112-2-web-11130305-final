@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+import { CurrencyPipe } from '@angular/common';
+import { Component, Input, numberAttribute } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
   standalone: true,
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.css',
 })
 export class ProductCardComponent {
-  productName = 'A 產品';
-  authors = '作者 A、作者 B、作者 C';
-  company = '博碩文化';
-  price = '';
-  isShow = true;
-  imgUrl = 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img';
+  @Input() productName!: string;
+  @Input() authors!: string;
+  @Input() company!: string;
+  @Input() isShow!: boolean;
+  @Input() imgUrl!: string;
+  @Input({ transform: numberAttribute }) price!: number;
 }
