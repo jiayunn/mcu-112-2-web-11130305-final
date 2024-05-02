@@ -1,5 +1,8 @@
 <div class="container">
+  @for (product of products; track product.id) {
+
   <app-product-card
+    [id]="product.id"
     [productName]="product.name"
     [authors]="product.authors"
     [company]="product.company"
@@ -8,39 +11,5 @@
     [price]="product.price"
   ></app-product-card>
 
-  <app-product-card
-    [productName]="product.name"
-    [authors]="product.authors"
-    [company]="product.company"
-    [isShow]="product.isShow"
-    [imgUrl]="product.imgUrl"
-    [price]="product.price"
-  ></app-product-card>
-
-  <app-product-card
-    [productName]="product.name"
-    [authors]="product.authors"
-    [company]="product.company"
-    [isShow]="product.isShow"
-    [imgUrl]="product.imgUrl"
-    [price]="product.price"
-  ></app-product-card>
-
-  <app-product-card
-    [productName]="product.name"
-    [authors]="product.authors"
-    [company]="product.company"
-    [isShow]="product.isShow"
-    [imgUrl]="product.imgUrl"
-    [price]="product.price"
-  ></app-product-card>
-
-  <app-product-card
-    [productName]="product.name"
-    [authors]="product.authors"
-    [company]="product.company"
-    [isShow]="product.isShow"
-    [imgUrl]="product.imgUrl"
-    [price]="product.price"
-  ></app-product-card>
+  }
 </div>

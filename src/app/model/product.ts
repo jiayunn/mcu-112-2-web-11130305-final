@@ -3,6 +3,8 @@ export class Product {
     Object.assign(this, initData);
   }
 
+  id!: number;
+
   name!: string;
 
   authors!: string;
