@@ -10,5 +10,6 @@ import { ProductCardComponent } from '../product-card/product-card.component';
   styleUrl: './product-card-list.component.css',
 })
 export class ProductCardListComponent {
-  @Input() products!: Product[];
+  @Input({ required: true })
+  products!: Product[];
 }
