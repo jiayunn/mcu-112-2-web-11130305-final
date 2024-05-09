@@ -1,6 +1,6 @@
 <img [src]="imgUrl" />
 <div>
-  <strong>{{ productName }} {{ isSale }}</strong>
+  <strong [class.sale]="isSale">{{ productName }}</strong>
 </div>
 <div>
   @for (author of authors; track author) {

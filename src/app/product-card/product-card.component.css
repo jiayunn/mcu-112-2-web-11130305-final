@@ -24,3 +24,7 @@ button.joincart {
   background-color: #007bff;
   color: white;
 }
+
+.sale {
+  color: red;
+}
