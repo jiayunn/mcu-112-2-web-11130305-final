@@ -49,3 +49,10 @@ button.joincart {
   background-color: #007bff;
   color: white;
 }
+
+.sale {
+  display: inline-block;
+  font-size: 18px;
+  padding-left: 10px;
+  color: red;
+}
