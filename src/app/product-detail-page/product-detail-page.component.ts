@@ -11,10 +11,8 @@ import { Router } from '@angular/router';
   templateUrl: './product-detail-page.component.html',
   styleUrl: './product-detail-page.component.css',
 })
-export class ProductDetailPageComponent implements OnInit {
-  @Input({ transform: numberAttribute })
-  id!: number;
-
+export class ProductDetailPageComponent {
+  @Input()
   product!: Product;
 
   private router = inject(Router);
@@ -23,9 +21,5 @@ export class ProductDetailPageComponent implements OnInit {
 
   onBack(): void {
     this.router.navigate(['products']);
-  }
-
-  ngOnInit(): void {
-    this.product = this.productService.getById(this.id);
   }
 }
