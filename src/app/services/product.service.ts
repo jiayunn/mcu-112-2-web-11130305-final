@@ -55,5 +55,7 @@ export class ProductService {
     return of(product);
   }
 
-  constructor() {}
+  getCount(name?: string): Observable<number> {
+    throw new Error('NO');
+  }
 }
