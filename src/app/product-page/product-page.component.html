@@ -1,5 +1,5 @@
 <input type="text" placeholder="產品名稱查詢" [formControl]="formControl" />
-<button class="button">查詢</button>
+<button class="button" (click)="condition=formControl.value">查詢</button>
 <app-product-card-list
   [products]="(product$|async)||[]"
   [totalCount]="(totalCount$ | async) || 0"
