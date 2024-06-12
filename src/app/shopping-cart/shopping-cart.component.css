@@ -3,25 +3,24 @@
   padding: 10px;
 }
 
-section.container {
-  width: auto;
+div.container {
   display: flex;
   justify-content: space-between;
 }
 
 table.msg {
-  width: 40%;
   border-collapse: collapse;
   border: 1px solid #ccc;
+  width: 550px;
 }
 
 table.item {
-  width: 90%;
   border-collapse: collapse;
   border: 1px solid #ccc;
+  width: 800px;
 }
 
-th {
+th.text {
   height: 30px;
   text-align: center;
   font-size: large;

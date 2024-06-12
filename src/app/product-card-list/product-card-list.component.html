@@ -11,6 +11,7 @@
     [imgUrl]="product.imgUrl"
     [price]="product.price"
     (view)="view.emit(product)"
+    (addTo)="addTo.emit(product)"
   ></app-product-card>
 
   }

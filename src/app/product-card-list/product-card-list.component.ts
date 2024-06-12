@@ -2,6 +2,7 @@ import { Product } from './../model/product';
 import { Component, EventEmitter, Input, Output, numberAttribute } from '@angular/core';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { PaginationComponent } from '../pagination/pagination.component';
+import { ShoppingItem } from '../model/shopping-item';
 
 @Component({
   selector: 'app-product-card-list',
@@ -16,6 +17,9 @@ export class ProductCardListComponent {
 
   @Output()
   view = new EventEmitter<Product>();
+
+  @Output()
+  addTo = new EventEmitter<Product>();
 
   @Input({ required: true, transform: numberAttribute })
   totalCount!: number;

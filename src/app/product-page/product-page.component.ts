@@ -1,3 +1,5 @@
+import { ShoppingItem } from './../model/shopping-item';
+import { ShoppingCartService } from './../shopping-cart.service';
 import { ProductService } from './../services/product.service';
 import { Component, inject } from '@angular/core';
 import { Product } from '../model/product';
@@ -22,6 +24,8 @@ export class ProductPageComponent {
   protected pageSize = 5;
 
   private readonly refresh$ = new Subject<void>();
+
+  protected readonly shoppingCartService = inject(ShoppingCartService);
 
   protected readonly formControl = new FormControl<string | undefined>(undefined, { nonNullable: true });
 
@@ -65,5 +69,9 @@ export class ProductPageComponent {
 
   onView(product: Product): void {
     this.router.navigate(['product', product.id]);
+  }
+
+  addProduct(shoppingItem: ShoppingItem): void {
+    this.router.navigate(['product', shoppingItem.id]);
   }
 }
