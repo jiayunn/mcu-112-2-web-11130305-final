@@ -44,7 +44,7 @@ div.item {
 }
 
 div.form-item > label {
-  flex-basis: 150px;
+  flex-basis: auto;
   text-align: center;
 }
 
@@ -103,4 +103,13 @@ div.delete button {
   cursor: pointer;
   color: #005cbb;
   border: 1px solid #005cbb;
+}
+
+.tool-bar button[disabled] {
+  cursor: not-allowed;
+}
+
+span.error-message {
+  color: #ba1a1a;
+  font-size: 16px;
 }
