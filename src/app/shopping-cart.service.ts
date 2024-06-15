@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { ProductService } from './services/product.service';
+import { Injectable, inject } from '@angular/core';
 import { Product } from './model/product';
 import { ShoppingItem } from './model/shopping-item';
 
