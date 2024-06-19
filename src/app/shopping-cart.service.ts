@@ -2,6 +2,7 @@ import { ProductService } from './services/product.service';
 import { Injectable, inject } from '@angular/core';
 import { Product } from './model/product';
 import { ShoppingItem } from './model/shopping-item';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -17,5 +18,9 @@ export class ShoppingCartService {
       const id = this.data.length === 0 ? 1 : Math.max(...this.data.map((item) => item.id)) + 1;
       this.data.push(new ShoppingItem({ id, product, count: 1 }));
     }
+  }
+
+  getCartCount(): Observable<number> {
+    return of(this.data.length);
   }
 }

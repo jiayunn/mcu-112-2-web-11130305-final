@@ -31,7 +31,7 @@
         <div class="id">{{ control.value.id }}</div>
         <div class="name">{{ control.value.product?.name }}</div>
         <div class="count">
-          <input type="number" formControlName="count" />
+          <input min="1" type="number" formControlName="count" />
         </div>
         <div class="price">{{ control.value.price | currency }}</div>
         <div class="delete">

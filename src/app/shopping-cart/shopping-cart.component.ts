@@ -50,6 +50,7 @@ export class ShoppingCartComponent implements OnInit {
       .pipe(
         map((items) => {
           if (items.length === 0) {
+            this.shoppingCartService.data = [];
             return 0;
           } else {
             return items.reduce((sum, curr) => sum + (curr.price || 0), 0);
