@@ -23,7 +23,7 @@
         "作者C"
       ],
       "company": "博碩文化",
-      "isShow": true,
+      "isShow": false,
       "isSale": false,
       "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
       "price": 1580
